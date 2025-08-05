@@ -43,13 +43,14 @@ public class Paciente {
 
    }
 
-   public void excluir(){
-       this.ativo = false;
-   }
-
    public void atualizarInformacoes(@Valid  DadosAtualizacaoPaciente dados){
         this.nome = dados.nome() != null ? dados.nome() : this.nome;
         this.telefone = dados.telefone() != null ? dados.telefone() : this.telefone;
         this.endereco = dados.endereco() != null ? dados.endereco() : this.endereco;
    }
+
+    public void excluir(){
+        this.ativo = false;
+    }
+
 }

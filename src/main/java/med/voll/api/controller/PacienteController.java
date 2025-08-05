@@ -17,14 +17,20 @@ public class PacienteController {
     @Autowired
     PacienteRepository repository;
 
+    @GetMapping
+    public Page<DadosListagemPaciente> listar(@PageableDefault(size = 10) Pageable paginacao){
+        return repository.findAllByAtivoTrue(paginacao).map(DadosListagemPaciente::new);
+    }
     @PostMapping
     public void caddastrarPaciente (@RequestBody @Valid DadosPaciente paciente){
         repository.save(new Paciente(paciente));
     }
 
-    @GetMapping
-    public Page<DadosListagemPaciente> listar(@PageableDefault(size = 10) Pageable paginacao){
-        return repository.findAllByAtivoTrue(paginacao).map(DadosListagemPaciente::new);
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody DadosAtualizacaoPaciente dados){
+        var paciente = repository.getReferenceById(dados.id());
+        paciente.atualizarInformacoes(dados);
     }
 
     @DeleteMapping("/{id}")
@@ -34,11 +40,6 @@ public class PacienteController {
         paciente.excluir();
     }
 
-    @PutMapping
-    @Transactional
-    public void atualizar(@RequestBody DadosAtualizacaoPaciente dados){
-        var paciente = repository.getReferenceById(dados.id());
-        paciente.atualizarInformacoes(dados);
-    }
+
 
 }
