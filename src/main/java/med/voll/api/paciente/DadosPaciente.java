@@ -21,6 +21,5 @@ public record DadosPaciente(
         String cpf,
 
         @Valid
-        DadosEndereco endereco) {
-
-}
+        DadosEndereco endereco
+        ){}
