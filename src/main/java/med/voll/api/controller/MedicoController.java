@@ -53,6 +53,6 @@ public class MedicoController {
     @GetMapping("/{id}")
     public ResponseEntity detalhar(@PathVariable Long id){
         var medico = repository.getReferenceById(id);
-        return  ResponseEntity.ok(new DadosDetalhamentoMedico(medico)); // retornando 204 como boa prática para endpoint de exclusão
+        return  ResponseEntity.ok(new DadosDetalhamentoMedico(medico)); //
     }
 }
