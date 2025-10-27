@@ -6,17 +6,12 @@ import jakarta.validation.constraints.NotBlank;
 import med.voll.api.domain.endereco.DadosEndereco;
 
 public record DadosPaciente(
-        @NotBlank
         String nome,
 
-        @NotBlank
-        @Email
         String email,
 
-        @NotBlank
         String telefone,
 
-        @NotBlank
         String cpf,
 
         @Valid
