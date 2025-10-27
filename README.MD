@@ -85,7 +85,7 @@ O foco principal é entender e aplicar:
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/seuusuario/volmmed-api.git
+   git clone https://github.com/GutembergSouza/volmmed-api.git
    
 2. **Configure o banco de dados MySQL**
 
