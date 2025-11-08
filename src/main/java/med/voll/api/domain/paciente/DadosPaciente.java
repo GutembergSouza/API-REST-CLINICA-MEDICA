@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import med.voll.api.domain.endereco.DadosEndereco;
 
 public record DadosPaciente(
+
         String nome,
 
         String email,
