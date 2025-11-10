@@ -1,0 +1,1 @@
+INSERT INTO usuarios VALUES(1, 'admin@vol.med', 'admin');
