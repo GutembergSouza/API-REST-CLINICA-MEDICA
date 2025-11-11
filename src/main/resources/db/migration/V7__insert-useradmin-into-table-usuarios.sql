@@ -1,1 +1,1 @@
-INSERT INTO usuarios VALUES(1, 'admin@vol.med', 'admin');
+INSERT INTO usuarios VALUES(1, 'admin@voll.med', '$2a$12$3q4YrBMgc0DjZbM3i.v2gehWpHwg.elOI/TaB/ZkcajTSldAKpvzq');
